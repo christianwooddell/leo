@@ -291,4 +291,12 @@ create_messages!(
         msg: format!("expected no underscores or leading zeros -- found '{found}'"),
         help: None,
     }
+
+    /// Enforce that empty functions cannot have finalize functions attached to them
+    @formatted
+    empty_function_cannot_have_finalize {
+        args: (),
+        msg: format!("Empty functions cannot have finalize functions attached to them."),
+        help: None,
+    }
 );
